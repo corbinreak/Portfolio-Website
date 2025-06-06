@@ -1,59 +1,49 @@
+/* ===== Global Styles ===== */
 html {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     font-size: 20px;
 }
 
+/* ===== Header Section ===== */
 header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    border-bottom: 2px solid lightgray;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 80px;
-    z-index: 1000;
     width: 100%;
     background-color: black;
-
-
+    border-bottom: 2px solid lightgray;
+    z-index: 1000;
+    color: white;
 }
 
+/* Aligns main content below fixed header */
 main {
     margin-top: 80px;
+    flex: 1;
 }
 
+/* ===== Heading Title ===== */
 .heading-title h1 {
     margin: 0;
     margin-left: 25px;
 }
 
-
+/* ===== Navigation Styles ===== */
 nav ul {
     list-style: none;
     color: lightgray;
     display: flex;
     gap: 20px;
-    padding-top: 40px;
-    padding-bottom:10px;
-    margin: 0px;
+    margin: 0;
+    padding: 40px 25px 10px 0;
     justify-content: flex-end;
-    margin-right: 25px;
-    
-
 }
-
-a:hover {
-    border: 4px solid lightgray;
-    border-radius: 10px;
-    background-color: lightgray;
-    color: gray;
-
-    
-}
-
 
 nav ul li a {
     text-decoration: none;
@@ -61,7 +51,14 @@ nav ul li a {
     font-weight: bold;
 }
 
+a:hover {
+    border: 4px solid lightgray;
+    border-radius: 10px;
+    background-color: lightgray;
+    color: gray;
+}
 
+/* ===== First Impression Section ===== */
 .first-impression {
     position: relative;
     width: 100%;
@@ -74,19 +71,77 @@ nav ul li a {
     background-repeat: no-repeat;
     background-position: center;
     top: 25px;
-    
+    bottom: 25px;
 }
 
-
+/* ===== Overlay Text Box ===== */
 .fi-text {
     color: lightskyblue;
     text-align: center;
     z-index: 10;
     display: block;
     margin: auto;
+    padding: 0 20px;
     border: 5px solid rgba(211, 211, 211, 0.2);
     background-color: rgba(211, 211, 211, 0.2);
     border-radius: 20px;
-    padding: 0px 20px 0 20px;
 }
+
+/* ==== about section ==== */
+.about {
+    margin: 50px;
+    background-color: whitesmoke;
+    color: black;
+}
+
+.about h3 {
+    font-style: italic;
+    font-size: 50px;
+    text-align: left;
+    padding-bottom: 25px;
+}
+
+/* ==== article section ====*/
+article {
+    padding: 0 25px 25px 25px;
+    text-align: center;
+    font-size: 21px;
+}
+
+
+/* ===== footer section ==== */
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    height: 200px;
+}
+
+.copy-write {
+    display: flex;
+    
+}
+
+.copy-write h4 {
+    justify-content: flex-start;
+    align-items: flex-end;
+    display: flex;
+    margin-bottom: 0;
+    padding-left: 15px;
+    font-size: 18px;
+    color: lightgray;
+    font-size: 16px;
+}
+
+
+
+.footer-nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    
+}
+
+
 
