@@ -5,6 +5,12 @@ html {
     font-size: 20px;
 }
 
+html, body{
+    height: 100%;
+    margin: 0;
+    padding:0;
+}
+
 /* ===== Header Section ===== */
 header {
     display: flex;
@@ -17,7 +23,7 @@ header {
     height: 80px;
     width: 100%;
     background-color: black;
-    border-bottom: 2px solid lightgray;
+    border-bottom: 3px solid lightslategray;
     z-index: 1000;
     color: white;
 }
@@ -116,6 +122,7 @@ footer {
     color: white;
     display: flex;
     height: 200px;
+    padding: 20px;
 }
 
 .copy-write {
@@ -124,14 +131,14 @@ footer {
 }
 
 .copy-write h4 {
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-end;
     display: flex;
     margin-bottom: 0;
-    padding-left: 15px;
-    font-size: 18px;
+    padding-left: 10px;
+    font-size: 13px;
     color: lightgray;
-    font-size: 16px;
+    
 }
 
 

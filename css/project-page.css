@@ -15,7 +15,7 @@ header {
     height: 80px;
     width: 100%;
     background-color: black;
-    border-bottom: 2px solid lightgray;
+    border-bottom: 3px solid lightslategray;
     z-index: 1000;
     color: white;
 }
@@ -41,9 +41,38 @@ nav ul li a {
     font-weight: bold;
 }
 
-a:hover {
+nav a:hover {
     border: 4px solid lightgray;
     border-radius: 10px;
     background-color: lightgray;
     color: gray;
+}
+
+.heading-title a:visited {
+    color: white
+}
+
+main {
+    margin-top: 150px;
+}
+
+#project-id {
+    font-size: 40px;
+    text-align: center
+}
+
+
+#projects a:visited {
+    color: black;
+}
+
+#projects a:hover {
+    border: 3px solid lightgray;
+    border-radius: 10px;
+    background-color: lightgray;
+    color: blue;
+}
+
+a {
+    text-decoration:none;
 }
