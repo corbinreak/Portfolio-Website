@@ -77,3 +77,42 @@ article ul li a:hover {
     border-radius: 10px;
     font-size: 25px;
 }
+
+#hamburger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-menu ul {
+        display: none;
+        flex-direction: row; 
+        background-color: #222;
+        padding: 10px;
+        
+    }
+
+    #hamburger {
+        display: block;
+        font-size: 30px;
+        color: #f8F8F8;
+        background: none;
+        cursor: pointer;
+        border: none;
+        margin-left: auto;
+        
+        
+    }
+
+    #navMenu.show-menu ul {
+        display: flex;
+        flex-direction: row;
+        font-size: 17px;
+        background-color: black;
+        color: white;
+    }
+
+    .heading-title h1 {
+        font-size: 32px;
+    }
+
+}

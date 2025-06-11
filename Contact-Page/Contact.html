@@ -3,6 +3,8 @@
     <head>
         <link rel="stylesheet" href="../css/contact-page.css">
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     </head>
       <body>
         <header>
@@ -10,11 +12,12 @@
             <div class="heading-title">
                 <h1><a href="../index.html">Corbin's Contacts</a></h1>
             </div>
-            <nav class="nav-menu">
+            <button id="hamburger">&#9776</button>
+           <nav class="nav-menu" id="navMenu">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../index.html#about-section">About</a></li>
-                    <li><a href="../Contact-Page/Contact.html">Contact</a></li>
+                    <li>Contact</li>
                     <li><a href="../Project-Page/Projects.html">Projects</a></a></li>
                 </ul>
             </nav>
@@ -33,5 +36,14 @@
                 <p>If you would like to reach-out via email with any potential job offeres/questions email me @ <a href="mailto:corbinreak@gmail.com">Corbinreak@gmail.com</a></p>
          </article>
       </main>
+      <script>
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.getElementById("navMenu");
+
+        hamburger.addEventListener("click", () => {
+          navMenu.classList.toggle("show-menu")
+        })
+
+      </script>
     </body>
 </html>
