@@ -48,6 +48,10 @@ nav a:hover {
     color: gray;
 }
 
+.heading-title a:before {
+    color: white;
+}
+
 .heading-title a:visited {
     color: white
 }

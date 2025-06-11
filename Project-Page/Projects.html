@@ -20,22 +20,46 @@
         </nav>    
       </header>           
         <main>
-          <article>  
+          <article> 
+            <div id="search-container">
+              <input type="text" id="searchBar" placeholder="Search Projects....">
+            </div> 
             <p id="project-id"><strong>Projects:</strong></p>
                <ul id="projects">
-                <li><a>
+                <li data-tags="javascript random message app user id task generator">
                   <h2>Random Message App:</h2>
-                    <p>This is my first JavaScript application. When run, it generates a unique user ID, randomly selects a location (e.g., Home, The Office, or The Ark), and displays a personalized message along with a list of tasks to complete based on that location.</p> 
-                   </a>
+                    <p>This is my first JavaScript application. When run, it generates a unique user ID, randomly selects a location (e.g., Home, The Office, or The Ark), and displays a personalized message along with a list of tasks to complete based on that location.</p>                    
                  </li>
-                <li>
+                <li data-tags="html css portfolio personal site full stack">
                     <h2><a href="../index.html">My Portfolio:</a></h2>
                       <p>My Portfolio is my personal website that explains who i am and shows the projects/ skills i have aquired while learning to be a full stack developer. It has 3 pages filled of HTML and CSS with some basic JavaScript.</p>
                  </li>
                </ul>
              </article>
            </main>
-        </body>
       <footer>
   </footer>
-</html>
+  <script>
+     const searchBar = document.getElementById("searchBar");
+      const projects = document.querySelectorAll("#projects li");
+
+        searchBar.addEventListener("input", function() {
+           const query = this.value.toLowerCase();
+
+
+          projects.forEach(project => {
+            const tags = project.dataset.tags.toLowerCase();
+            const title = project.querySelector("h2").textContent.toLowerCase();
+            const description = project.querySelector("p").textContent.toLowerCase();
+
+
+            if (tags.includes(query) || title.includes(query) || description.includes(query)) {
+              project.style.display = "list-item";
+            } else {
+              project.style.display = "none";
+            }
+          });
+        });
+  </script>
+ </body>
+</html> 
