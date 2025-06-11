@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/project-page.css">
   </head>
     <body>
@@ -10,7 +11,8 @@
         <div class="heading-title">
             <h1><a href="../index.html">Corbin's Projects</a></h1>
         </div>
-        <nav class="nav-menu">
+        <button id="hamburger">&#9776</button>
+        <nav class="nav-menu" id="navMenu">
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../index.html#about-section">About</a></li>
@@ -20,11 +22,12 @@
         </nav>    
       </header>           
         <main>
-          <article> 
+          <article>
+            <p id="project-id"><strong>Projects:</strong></p>
             <div id="search-container">
               <input type="text" id="searchBar" placeholder="Search Projects....">
             </div> 
-            <p id="project-id"><strong>Projects:</strong></p>
+            
                <ul id="projects">
                 <li data-tags="javascript random message app user id task generator">
                   <h2>Random Message App:</h2>
@@ -59,6 +62,13 @@
               project.style.display = "none";
             }
           });
+        });
+
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.getElementById("navMenu");
+
+        hamburger.addEventListener("click", () => {
+         navMenu.classList.toggle("show-menu");
         });
   </script>
  </body>
